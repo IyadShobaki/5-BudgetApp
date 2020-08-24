@@ -1,7 +1,30 @@
 // Budget module/controller to process the data coming from he UI
 var budgetController = (function () {
 
+    //Expense function costructor ((class) in another language)
+    var Expense = function(id, description, value){
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    }
+    //Income function costructor ((class) in another language)
+    var Income = function(id, description, value){
+        this.id = id;
+        this.description = description;
+        this.value = value;
+    }
 
+    var data = {
+        allItems:{
+            exp: [],
+            inx: []
+        },
+        totals:{
+            exp: 0,
+            inc: 0
+        }
+        
+    }
 })();
 
 // UI module/controller to read the data from the UI
@@ -78,3 +101,27 @@ var controller = (function (budgetCtrl, UICtrl) {
 
 // The only code outside controllers to start the app
 controller.init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
